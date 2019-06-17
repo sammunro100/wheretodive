@@ -1,0 +1,29 @@
+@import './colours.scss';
+
+@mixin breakPoint($width) {
+    @media (min-width:#{$width}) {
+        @content;
+    }
+}
+
+@mixin flexCenterCenter($flexDir: row){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $flexDir;
+}
+
+/*
+1 - Get the relevant node packages that we need in this case it's open layers
+- Node packages are basically pieces of prewritten code that we can add to our project to be used 
+exactly the same way you might use jquery
+- --save will save the node packages to package.json - Explain package.json (Schematic)
+2 - Talk through the file structure and why it's good to have one
+3 - Talk through some css, so lets explain mixins, css naming conventions, html tags, padding to keep items away from the edge 
+- of the header and then flex to space items out ect also add lato font talk though styles.css margin padding
+4 - So to make the header and the mobile menu going to need some controls input and outputs booleans, a function that toggles that boolean
+ - css wise animation, mixin for centering prehaps and mixin for break point
+5 - Wire up one li ul href links to a router reference along with function to toggle
+6 - Then talk about how you'd like the map and then the dive site to behave on a mobile device ux/ui 
+7 - If we get this far then lets create the service and pass some data along to our divesite info component 
+**/
